@@ -1,25 +1,41 @@
-# Patterns 目录说明
-本目录下每个模式一个 Markdown。  
-建议顺序（迭代补齐）：
+# Patterns 目录说明 (已更新)
+
+已有：
 1. strategy.md
 2. factory_method.md
-3. singleton.md
-4. abstract_factory.md
-5. builder.md (可裁剪)
-6. adapter.md
-7. composite.md
-8. object_pool.md
-9. state.md
-10. observer.md
-11. command.md
-12. producer_consumer.md
-13. double_buffer.md
-14. decorator.md
-15. proxy.md (可与硬件访问缓存/权限结合)
-16. facade.md
-17. chain_of_responsibility.md (日志/过滤管线)
-18. template_method.md
-19. visitor.md (可精简 + variant 替代说明)
-20. anti_patterns.md (汇总)
+3. adapter.md
+4. object_pool.md
+5. state.md
+6. observer.md
+7. producer_consumer.md
+8. double_buffer.md
+9. command.md
 
-优先级：先与嵌入式高频的策略/工厂/对象池/状态/观察者/双缓冲/生产者消费者。
+计划（下一步）：
+10. singleton.md (嵌入式安全变体)
+11. abstract_factory.md
+12. adapter.md (已完成)
+13. composite.md
+14. object_pool.md (已完成)
+15. state.md (已完成)
+16. observer.md (已完成)
+17. command.md (已完成)
+18. producer_consumer.md (已完成)
+19. double_buffer.md (已完成)
+20. decorator.md
+21. proxy.md
+22. facade.md
+23. chain_of_responsibility.md
+24. template_method.md
+25. visitor.md (简化+variant 替代)
+26. anti_patterns.md (汇总误用与替代)
+
+优先级建议（后续批次）：
+- 功耗/硬件相关：singleton（硬件资源管理正确姿势）、proxy（访问权限或延迟硬件访问）、facade（子系统初始化）
+- 复杂管线：chain_of_responsibility / decorator
+- 数据结构演进：composite (菜单/树形配置)
+- 语言特性对比：visitor vs variant
+
+维护约定：
+- 新模式对照 _template.md
+- 每个模式完成后添加对应练习题 stub（docs/interactive_stubs.md 扩展）
