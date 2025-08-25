@@ -1,6 +1,6 @@
-# Patterns 目录说明 (已更新)
+# Patterns 目录说明 (更新)
 
-已有：
+已完成模式：
 1. strategy.md
 2. factory_method.md
 3. adapter.md
@@ -10,32 +10,37 @@
 7. producer_consumer.md
 8. double_buffer.md
 9. command.md
-
-计划（下一步）：
-10. singleton.md (嵌入式安全变体)
+10. singleton.md
 11. abstract_factory.md
-12. adapter.md (已完成)
-13. composite.md
-14. object_pool.md (已完成)
-15. state.md (已完成)
-16. observer.md (已完成)
-17. command.md (已完成)
-18. producer_consumer.md (已完成)
-19. double_buffer.md (已完成)
-20. decorator.md
-21. proxy.md
-22. facade.md
-23. chain_of_responsibility.md
-24. template_method.md
-25. visitor.md (简化+variant 替代)
-26. anti_patterns.md (汇总误用与替代)
+12. composite.md
+13. decorator.md
+14. proxy.md
+15. facade.md
+16. chain_of_responsibility.md
+17. template_method.md
+18. visitor.md (含 variant 替代)
+19. anti_patterns.md
 
-优先级建议（后续批次）：
-- 功耗/硬件相关：singleton（硬件资源管理正确姿势）、proxy（访问权限或延迟硬件访问）、facade（子系统初始化）
-- 复杂管线：chain_of_responsibility / decorator
-- 数据结构演进：composite (菜单/树形配置)
-- 语言特性对比：visitor vs variant
+剩余（可选/后续）：
+- builder.md
+- prototype.md (低优先级, 嵌入式较少)
+- flyweight.md (内存共享, 若需)
+- mediator.md
+- memento.md
+- specification.md (可选)
+- pimpl.md (结构优化/封装, 可入扩展章节)
+
+优先级建议（下一迭代）：
+1. decorator（已完成）与 proxy/facade 综合案例
+2. chain_of_responsibility + command + object_pool 组合示例（消息管线）
+3. anti_patterns.md 持续扩展：添加真实度量示例
 
 维护约定：
-- 新模式对照 _template.md
-- 每个模式完成后添加对应练习题 stub（docs/interactive_stubs.md 扩展）
+- 新增模式遵循 _template.md
+- 每个模式添加 1~3 道练习题目 stub 到 docs/interactive_stubs.md
+- 代码示例保持 C++17 可编译（无异常依赖）
+
+后续行动：
+- 整理综合案例：功耗管理/通信帧管线
+- 生成速查表：模式 -> 嵌入式关注点 (堆/实时/尺寸)
+- 根据读者反馈裁剪低频模式
